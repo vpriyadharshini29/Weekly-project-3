@@ -1,0 +1,31 @@
+.scroll-top-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #4f46e5;
+  color: #fff;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  z-index: 999;
+  transition: all 0.3s ease;
+}
+
+.scroll-top-btn.show {
+  display: block;
+  animation: bounce 1.2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+

@@ -1,0 +1,122 @@
+/* App.css */
+
+/* Common */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #f0f4f8, #e0f7fa);
+  color: #1f2937;
+}
+
+.app-container {
+  padding: 2rem;
+  max-width: 960px;
+  margin: auto;
+}
+
+.project-nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.nav-btn {
+  padding: 0.7rem 1.5rem;
+  background-color: #3b82f6;
+  border: none;
+  border-radius: 1rem;
+  color: white;
+  font-weight: bold;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-btn:hover {
+  background-color: #2563eb;
+  transform: scale(1.05);
+}
+
+.nav-btn.active {
+  background-color: #1d4ed8;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.project-display {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Bonus Utility Features */
+input:focus,
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Animate toggle switch */
+.toggle-switch {
+  display: inline-block;
+  position: relative;
+  width: 60px;
+  height: 30px;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: '';
+  height: 22px;
+  width: 22px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #4ade80;
+}
+
+input:checked + .slider:before {
+  transform: translateX(30px);
+}

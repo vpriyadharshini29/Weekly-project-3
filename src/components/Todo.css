@@ -1,0 +1,146 @@
+/* Global font & background */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #e3f2fd, #ffffff);
+  margin: 0;
+  padding: 40px;
+}
+
+/* Main container */
+.todo-container {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease;
+}
+
+.todo-container:hover {
+  transform: scale(1.01);
+}
+
+/* Heading */
+.todo-container h2 {
+  font-size: 1.8rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 1.2rem;
+}
+
+/* Inputs & Buttons */
+input[type="text"], select {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+input[type="text"]:focus, select:focus {
+  border-color: #0077ff;
+}
+
+.btn {
+  cursor: pointer;
+  background: #4CAF50;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #43a047;
+}
+
+.bg-green-500 {
+  background-color: #43a047 !important;
+}
+
+.text-white {
+  color: white;
+}
+
+/* Task list */
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li {
+  transition: background 0.3s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Completed task style */
+.line-through {
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+/* Priority badges */
+.priority {
+  display: inline-block;
+  margin-top: 5px;
+  font-size: 0.8rem;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-weight: bold;
+}
+
+.priority.high {
+  background-color: #ffcdd2;
+  color: #c62828;
+}
+
+.priority.medium {
+  background-color: #ffe082;
+  color: #ef6c00;
+}
+
+.priority.low {
+  background-color: #c8e6c9;
+  color: #2e7d32;
+}
+
+/* Delete button */
+.text-red-500 {
+  color: #f44336;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.text-red-500:hover {
+  transform: scale(1.2);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .todo-container {
+    padding: 1.2rem;
+  }
+
+  .todo-container h2 {
+    font-size: 1.5rem;
+  }
+
+  input[type="text"], select {
+    font-size: 0.95rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+  }
+
+  .priority {
+    font-size: 0.75rem;
+  }
+}
